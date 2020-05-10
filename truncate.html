@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        text_truncate = function(string,length,ending){
+            if(length ==null){
+                length = 100;
+            }
+            if(ending ==null){
+                ending = '.......';
+            }
+            if (string.length> length){
+                return string.substring(0, length - ending.length)+ending;
+            }
+            else{
+                return string;
+            }
+        };
+        console.log(text_truncate('stay home saty safe.'))
+        console.log(text_truncate('stay home stay safe.',10))
+        console.log(text_truncate('stay home stay safe.',5,'!!'))
+        
+      
+    </script>
+</body>
+</html>

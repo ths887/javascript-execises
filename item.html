@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var array=[5,'x','x',4,'x',3,'x',9,4,3,7];
+       var ab = 1;
+       var a = 0;
+       var item;
+       for (var i=0; i<array.length; i++)
+       {
+           for (var j=i; j<array.length; j++)
+           {
+               if(array[i] == array[j])
+               a++;
+               if(ab<a)
+               {
+                   ab=a;
+                   item = array[i];
+               }
+           }
+           a=0;
+       }
+       console.log(item+"(" +ab +" times)");
+   </script> 
+</body>
+</html>
